@@ -79,13 +79,13 @@ Open http://localhost:3000 in your browser.
 
 ## Available Scripts
 
-npm start
+npm start  
 Runs the application in development mode.
 
-npm test
+npm test  
 Runs the test cases.
 
-npm run build
+npm run build  
 Builds the application for production.
 
 ---
