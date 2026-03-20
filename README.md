@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Quiz Flashcards Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web-based quiz and flashcards application developed using React. The application allows users to learn and test their knowledge across different subjects through interactive quizzes and flashcards.
+
+The project focuses on improving user engagement by providing instant feedback, score tracking, and a simple user interface.
+
+---
+
+## Features
+
+* Multiple subject categories such as Aptitude, Computer Science, General Knowledge, Mathematics, and Current Affairs
+* Flashcards for quick learning and revision
+* Quiz mode with multiple-choice questions
+* Score tracking using browser localStorage
+* Leaderboard based on user scores
+* Dark mode support
+* Immediate feedback for correct and incorrect answers
+
+---
+
+## Technologies Used
+
+* React.js
+* JavaScript
+* HTML
+* CSS
+* Browser localStorage
+
+---
+
+## Project Structure
+
+```
+quiz-flashcards/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── App.js
+│   ├── QuizPage.js
+│
+├── public/
+│   └── index.html
+│
+├── package.json
+├── README.md
+```
+
+---
+
+## How to Run the Project
+
+1. Clone the repository
+
+```
+git clone https://github.com/PasumarthiHarshita/quiz-flashcards.git
+```
+
+2. Navigate to the project folder
+
+```
+cd quiz-flashcards
+```
+
+3. Install dependencies
+
+```
+npm install
+```
+
+4. Run the application
+
+```
+npm start
+```
+
+Open http://localhost:3000 in your browser.
+
+---
 
 ## Available Scripts
 
-In the project directory, you can run:
+npm start
+Runs the application in development mode.
 
-### `npm start`
+npm test
+Runs the test cases.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm run build
+Builds the application for production.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Author
 
-### `npm run build`
+Harshita Pasumarthi
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Note
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was developed as part of learning and practice. AI tools were used for guidance, and all features were implemented and understood during development.
