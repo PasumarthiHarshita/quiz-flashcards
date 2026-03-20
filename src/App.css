@@ -1,0 +1,293 @@
+/* === Import font (Nunito) === */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+:root{
+  --bg:#0b0b0b;
+  --card:#0f1720;
+  --muted:#9aa3b2;
+  --accent1: #7b61ff;
+  --accent2: #00e0ff;
+  --green:#2dd4bf;
+  --red:#ff6b6b;
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(180deg, #050505 0%, #0b0b0b 100%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* App root */
+.app-root{min-height:100vh;display:flex;flex-direction:column}
+
+/* Navbar */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 28px;
+  background: linear-gradient(90deg, rgba(123,97,255,0.12), rgba(0,224,255,0.06));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{
+  width:44px;height:44px;border-radius:10px;
+  background: linear-gradient(135deg,var(--accent1),var(--accent2));
+  display:flex;align-items:center;justify-content:center;font-weight:800;color:#021024;
+  box-shadow:0 8px 30px rgba(123,97,255,0.12);
+}
+.nav-logo{color:#eaf6ff;text-decoration:none;font-weight:700;font-size:18px}
+.nav-right .nav-link{color:var(--muted);text-decoration:none;margin-left:12px}
+
+/* Container */
+.container{
+  max-width:1100px;
+  margin:30px auto;
+  padding:28px;
+  width:100%;
+}
+
+/* Title */
+.title{
+  margin:0;
+  font-size:34px;
+  font-weight:800;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-align:center;
+}
+.subtitle{
+  margin-top:6px;
+  color:var(--muted);
+  text-align:center;
+}
+
+/* Course list */
+.course-list{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+.course-card{
+  width:240px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:14px;
+  padding:20px;
+  box-shadow: 0 10px 30px rgba(11,12,15,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  transition: transform .28s ease, box-shadow .28s ease;
+  text-align:center;
+}
+.course-card:hover{ transform: translateY(-8px); box-shadow:0 20px 40px rgba(11,12,15,0.7) }
+.course-card h3{ margin:6px 0 8px 0 ; font-size:20px; color:#eaf6ff}
+.course-desc{ color:var(--muted); font-size:13px; margin-bottom:12px}
+.btn{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.5);
+}
+.btn.primary{
+  background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#021024;
+}
+.btn.secondary{
+  background: linear-gradient(90deg,#8a8cff,#6bdcff);
+  color:#021024;
+}
+.btn.ghost{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  color:var(--muted);
+}
+
+/* choice page */
+.choice-page{ text-align:center }
+.choice-row{ display:flex;justify-content:center;gap:20px;margin-top:20px }
+
+/* Flashcard styles */
+.flash-area{ display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:22px }
+.flashcard-container{ width:320px; height:220px; perspective:1200px; }
+.flashcard-inner{
+  position:relative; width:100%; height:100%;
+  transition: transform .8s; transform-style: preserve-3d;
+  border-radius:16px; box-shadow: 0 20px 60px rgba(2,6,23,0.6);
+}
+.flashcard-inner.flipped{ transform: rotateY(180deg); }
+
+.flashcard-front, .flashcard-back{
+  position:absolute; inset:0; border-radius:16px; display:flex;
+  align-items:center; justify-content:center; padding:20px; font-size:18px; font-weight:700;
+  backface-visibility:hidden;
+  color:#021024;
+}
+.flashcard-front{
+  background: linear-gradient(135deg,#97f5e5,#8aa2ff);
+}
+.flashcard-back{
+  background: linear-gradient(135deg,#ffd27a,#ff7f7f);
+  transform: rotateY(180deg);
+}
+
+/* flash controls */
+.flash-controls{ margin-top:12px; text-align:center; color:var(--muted) }
+.small-muted{ color:var(--muted) }
+
+/* Quiz styles */
+.quiz-container{ margin-top:22px; display:flex; flex-direction:column; align-items:center; gap:12px }
+.question{ font-size:20px; font-weight:700; color:#eaf6ff; text-align:center; max-width:780px }
+.options{ display:flex; flex-direction:column; gap:12px; align-items:center; margin-top:8px; width:100% }
+.opt-btn{
+  width:60%;
+  padding:12px 16px;
+  border-radius:12px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  background: linear-gradient(90deg,#1f2937,#2b3440);
+  color:#e6eef8;
+  transition: box-shadow .18s, transform .12s;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+.opt-btn:hover{ transform: translateY(-4px) }
+
+/* glowing feedback classes */
+.opt-btn.correct{
+  box-shadow: 0 8px 30px rgba(45,212,191,0.28), 0 0 18px rgba(45,212,191,0.25);
+  background: linear-gradient(90deg, rgba(45,212,191,0.95), rgba(16,185,129,0.95));
+  color:#021024;
+}
+.opt-btn.wrong{
+  box-shadow: 0 8px 30px rgba(255,107,107,0.28), 0 0 18px rgba(255,107,107,0.25);
+  background: linear-gradient(90deg, rgba(255,107,107,0.95), rgba(255,95,95,0.95));
+  color:#021024;
+}
+
+/* small helpers */
+.section-title{ font-size:20px; margin:0; font-weight:800; color:#eaf6ff }
+.section-sub{ color:var(--muted) }
+
+.small-muted{ color:var(--muted) }
+
+@media (max-width:780px){
+  .opt-btn{ width:85% }
+  .flashcard-container{ width:280px; height:180px }
+  .flashcard-front, .flashcard-back{ font-size:16px }
+  .course-card{ width:180px }
+}
+/* ================= LIGHT MODE (FULL FIX) ================= */
+
+.light {
+  background: #f5f7fa;
+  color: #1a1a1a;
+}
+
+/* Navbar */
+.light .navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.light .nav-logo {
+  color: #1a1a1a;
+}
+
+.light .nav-right .nav-link {
+  color: #4a5568;
+}
+
+/* Title */
+.light .title {
+  background: linear-gradient(90deg, #4c51bf, #00bcd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light .subtitle {
+  color: #4a5568;
+}
+
+/* Course Cards */
+.light .course-card {
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.light .course-card h3 {
+  color: #1a1a1a;
+}
+
+.light .course-desc {
+  color: #555;
+}
+
+/* Buttons */
+.light .btn.primary {
+  background: linear-gradient(90deg, #6a5acd, #00c6ff);
+  color: white;
+}
+
+.light .btn.secondary {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+}
+
+/* Quiz Buttons */
+.light .opt-btn {
+  background: #edf2f7;
+  color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.light .opt-btn:hover {
+  background: #e2e8f0;
+}
+
+/* Question */
+.light .question {
+  color: #1a1a1a;
+}
+
+/* Flashcards */
+.light .flashcard-front {
+  background: linear-gradient(135deg, #b2fefa, #c2e9fb);
+  color: #1a1a1a;
+}
+
+.light .flashcard-back {
+  background: linear-gradient(135deg, #fddb92, #d1fdff);
+  color: #1a1a1a;
+}
+
+/* ================= DARK MODE (KEEP STRONG) ================= */
+
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
